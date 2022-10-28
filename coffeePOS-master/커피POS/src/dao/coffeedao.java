@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,15 +15,15 @@ import bean.Coffee;
 public class coffeedao {
 	private String driver = "oracle.jdbc.driver.OracleDriver" ;
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe" ;
-	private String username = "jspid" ;
-	private String password = "jsppw" ;
+	private String username = "scott" ;
+	private String password = "tiger" ;
 	private Connection conn = null ;
 	
 	public coffeedao() {
 		try {
 			Class.forName(driver) ;			
 		} catch (ClassNotFoundException e) {
-			System.out.println("Å¬·¡½º°¡ ¹ß°ßµÇÁö ¾Ê½À´Ï´Ù(jar ÆÄÀÏ ´©¶ô)"); 
+			System.out.println("í´ë˜ìŠ¤ê°€ ë°œê²¬ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤(jar íŒŒì¼ ëˆ„ë½)"); 
 			e.printStackTrace();		
 		}
 	}
@@ -31,7 +32,7 @@ public class coffeedao {
 		try {
 			conn = DriverManager.getConnection(url, username, password) ;
 		} catch (SQLException e) {
-			System.out.println("Ä¿³Ø¼Ç »ı¼º ¿À·ù");
+			System.out.println("ì»¤ë„¥ì…˜ ìƒì„± ì˜¤ë¥˜");
 			e.printStackTrace();
 		}
 		return conn ;
@@ -46,7 +47,7 @@ public class coffeedao {
 		}		
 	}
 
-	public int coffeeadd(Coffee bean){//ÄÜ¼ÖÃ¢¿¡¼­ µ¥ÀÌÅÍ¸¦ ÀÔ·Â¹Ş¾Æ °´Ã¼ »ı¼º
+	public int coffeeadd(Coffee bean){//ì½˜ì†”ì°½ì—ì„œ ë°ì´í„°ë¥¼ ì…ë ¥ë°›ì•„ ê°ì²´ ìƒì„±
 		int result =-1;
 		
 		PreparedStatement pstmt =null;
@@ -64,7 +65,9 @@ public class coffeedao {
 			pstmt.setInt(5, bean.getPrice());
 						
 			result = pstmt.executeUpdate();
+			conn.setAutoCommit(false);
 			conn.commit();	
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}catch (Exception e) {
@@ -92,7 +95,7 @@ public class coffeedao {
 	
 	
 	
-	public  Vector<Coffee> Getsellcount(){// ¿À´Ã ÆÇ¸ÅµÈ À½·á¼ö
+	public  Vector<Coffee> Getsellcount(){// ì˜¤ëŠ˜ íŒë§¤ëœ ìŒë£Œìˆ˜
 		PreparedStatement pstmt = null ;
 		ResultSet rs = null ;
 		String sql = "select coffeename , count(*)  from coffee group by  coffeename   order by count(*) desc" ;
@@ -130,8 +133,8 @@ public class coffeedao {
 	
 	
 	
-	public Vector<Coffee> GetAllSellList() {//db¿¡¼­ µ¥ÀÌÅÍ¸¦ ¹Ş¾Æ¼­ º¤ÅÍ·Î ¹İÈ¯ÇÏ´Â ¸Ş¼Òµå
-		//¸ğµç »óÇ° ¸ñ·ÏµéÀ» ¸®ÅÏÇÑ´Ù.
+	public Vector<Coffee> GetAllSellList() {//dbì—ì„œ ë°ì´í„°ë¥¼ ë°›ì•„ì„œ ë²¡í„°ë¡œ ë°˜í™˜í•˜ëŠ” ë©”ì†Œë“œ
+		//ëª¨ë“  ìƒí’ˆ ëª©ë¡ë“¤ì„ ë¦¬í„´í•œë‹¤.
 		PreparedStatement pstmt = null ;
 		ResultSet rs = null ;
 		String sql = "select * from coffee" ;
@@ -170,7 +173,7 @@ public class coffeedao {
 		
 	
 	
-	public Object[][] makeArr(Vector<Coffee> lists){//º¤ÅÍ¸¦ ¹Ş¾Æ¼­ ÀüÃ¼¸¦ 2Â÷¿ø ¹è¿­·Î ¸¸µé¾îÁÖ´Â ¸Ş¼Òµå
+	public Object[][] makeArr(Vector<Coffee> lists){//ë²¡í„°ë¥¼ ë°›ì•„ì„œ ì „ì²´ë¥¼ 2ì°¨ì› ë°°ì—´ë¡œ ë§Œë“¤ì–´ì£¼ëŠ” ë©”ì†Œë“œ
 		
 		Object [][] coffeearr = new Object [lists.size()][5]; 
 				
@@ -190,7 +193,7 @@ public class coffeedao {
 	
 	
 	
-	public Object[][] makelistArr(Vector<Coffee> lists){//º¤ÅÍ¸¦ ¹Ş¾Æ¼­ ÆÇ´ë·®À» 2Â÷¿ø ¹è¿­·Î ¸¸µé¾îÁÖ´Â ¸Ş¼Òµå
+	public Object[][] makelistArr(Vector<Coffee> lists){//ë²¡í„°ë¥¼ ë°›ì•„ì„œ íŒëŒ€ëŸ‰ì„ 2ì°¨ì› ë°°ì—´ë¡œ ë§Œë“¤ì–´ì£¼ëŠ” ë©”ì†Œë“œ
 		
 		Object [][] coffeearr = new Object [lists.size()][2]; 
 				

@@ -1,5 +1,6 @@
 import java.awt.EventQueue;
 
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
@@ -19,8 +20,8 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import javax.swing.ButtonGroup;
 
-//Àç°íÃ¢À» ¸¸µé¸é ¿ÏÀüÈ÷ ´Ù¸¥°É ¸¸µé¾î¾ß ÇÑ´Ù. ±×·¡¼­ ±×°É ¾î¶»°Ô ¸¸µéÁö °í¹ÎÇØºÁ¾ßµÉµí
-//ÀÏ´Ü ¸ÞÀÎ¿¡¼­ ¸¸µé¾î Áà¾ß ÇÔ ÀÔ·Âµ¥ÀÌÅÍ´Â ¿©±â¼­ ÀüºÎ ¹Þ¾Æ¼­ ¼­¹ö·Î ¾î³Ö¾îÁÖ´Â ¤¸ÂÊÀ¸·Î ¸¸µéÀÚ
+//ï¿½ï¿½ï¿½Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½. ï¿½×·ï¿½ï¿½ï¿½ ï¿½×°ï¿½ ï¿½î¶»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Øºï¿½ï¿½ßµÉµï¿½
+//ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ô·Âµï¿½ï¿½ï¿½ï¿½Í´ï¿½ ï¿½ï¿½ï¿½â¼­ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ö¾ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 public class MainUI {
 	Vector<Coffee> list =new Vector<Coffee>();
 	Coffee coffee = null; 
@@ -29,7 +30,7 @@ public class MainUI {
 	JLabel lblNewLabel_1;
 	String menu="";
 	int count=0;
-	boolean flag_size=false;//ÇÑ¹øÀÌ¶óµµ Å¬¸¯ÇÏ¸é true
+	boolean flag_size=false;//ï¿½Ñ¹ï¿½ï¿½Ì¶ï¿½ Å¬ï¿½ï¿½ï¿½Ï¸ï¿½ true
 	boolean flag_shot=false;
 	private JFrame frame;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
@@ -59,8 +60,8 @@ public class MainUI {
 		coffee = new Coffee();
 		dao = new coffeedao();
 		stock = new Stock();
-		stock = dao.getstock();	//¼­¹ö¿¡¼­ Àç°í µ¥ÀÌÅÍ ³Ö¾îÁÖ±â	
-		System.out.println(stock); // Àç°í µ¥ÀÌÅÍ È®ÀÎ
+		stock = dao.getstock();	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½Ö±ï¿½	
+		System.out.println(stock); // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
 		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 800, 750);
@@ -73,7 +74,7 @@ public class MainUI {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JButton btnNewButton = new JButton("¿¡½ºÇÁ·¹¼Ò");
+		JButton btnNewButton = new JButton("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -81,15 +82,15 @@ public class MainUI {
 				if(count > 1){
 					stock.setWondu(stock.getWondu()+1);
 				}
-				stock.setWondu(stock.getWondu()-1); // ¿øµÎÀç°í °ü¸®				
-				showlabel("¿¡½ºÇÁ·¹¼Ò",3000);
+				stock.setWondu(stock.getWondu()-1); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½				
+				showlabel("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",3000);
 				
 			}
 		});
 		btnNewButton.setBounds(50, 37, 100, 70);
 		panel.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("¾Æ¸Þ¸®Ä«³ë");
+		JButton btnNewButton_1 = new JButton("ï¿½Æ¸Þ¸ï¿½Ä«ï¿½ï¿½");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				count++;
@@ -98,13 +99,13 @@ public class MainUI {
 				}
 				
 				stock.setWondu(stock.getWondu()-1);
-				showlabel("¾Æ¸Þ¸®Ä«³ë",4000);
+				showlabel("ï¿½Æ¸Þ¸ï¿½Ä«ï¿½ï¿½",4000);
 			}
 		});
 		btnNewButton_1.setBounds(200, 37, 100, 70);
 		panel.add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("Ä«Æä¶ó¶¼");
+		JButton btnNewButton_2 = new JButton("Ä«ï¿½ï¿½ï¿½");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				count++;
@@ -113,8 +114,8 @@ public class MainUI {
 					stock.setMilk(stock.getMilk()+1);
 				}
 				stock.setWondu(stock.getWondu()-1);
-				stock.setMilk(stock.getMilk()-1);//¿ìÀ¯°ü¸®
-				showlabel("Ä«Æä¶ó¶¼",4500);
+				stock.setMilk(stock.getMilk()-1);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				showlabel("Ä«ï¿½ï¿½ï¿½",4500);
 			}
 		});
 		btnNewButton_2.setBounds(350, 37, 100, 70);
@@ -132,7 +133,7 @@ public class MainUI {
 				stock.setWondu(stock.getWondu()-1);
 				stock.setMilk(stock.getMilk()-1);
 				stock.setSirup(stock.getSirup()-1);
-				showlabel("¹Ù´Ò¶ó¶ó¶¼",4600);
+				showlabel("ï¿½Ù´Ò¶ï¿½ï¿½",4600);
 			}
 		});
 		btnNewButton_3.setBounds(500, 37, 100, 70);
@@ -150,7 +151,7 @@ public class MainUI {
 				stock.setWondu(stock.getWondu()-1);
 				stock.setMilk(stock.getMilk()-1);
 				stock.setSirup(stock.getSirup()-1);
-				showlabel("±×¸°Æ¼¶ó¶¼",4800);
+				showlabel("ï¿½×¸ï¿½Æ¼ï¿½ï¿½",4800);
 			}
 		});
 		btnNewButton_4.setBounds(650, 37, 100, 70);
@@ -168,7 +169,7 @@ public class MainUI {
 				stock.setWondu(stock.getWondu()-1);
 				stock.setMilk(stock.getMilk()-1);
 				stock.setSirup(stock.getSirup()-1);
-				showlabel("Ä«ÇªÄ¡³ë",4900);
+				showlabel("Ä«ÇªÄ¡ï¿½ï¿½",4900);
 			}
 		});
 		button.setBounds(50, 148, 100, 70);
@@ -186,7 +187,7 @@ public class MainUI {
 				stock.setWondu(stock.getWondu()-1);
 				stock.setMilk(stock.getMilk()-1);
 				stock.setSirup(stock.getSirup()-1);
-				showlabel("µ¹Ã¼¶ó¶¼",5100);
+				showlabel("ï¿½ï¿½Ã¼ï¿½ï¿½",5100);
 			}
 		});
 		button_1.setBounds(200, 148, 100, 70);
@@ -206,7 +207,7 @@ public class MainUI {
 				stock.setMilk(stock.getMilk()-1);
 				stock.setChoco(stock.getChoco()-1);
 				stock.setSirup(stock.getSirup()-1);
-				showlabel("Ä«Æä¸ðÄ«",4300);
+				showlabel("Ä«ï¿½ï¿½ï¿½Ä«",4300);
 			}
 		});
 		button_2.setBounds(350, 148, 100, 70);
@@ -226,7 +227,7 @@ public class MainUI {
 				stock.setMilk(stock.getMilk()-1);
 				stock.setChoco(stock.getChoco()-1);
 				stock.setSirup(stock.getSirup()-1);
-				showlabel("ÇÁ¶óÇÁÄ¡³ë",4700);
+				showlabel("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½",4700);
 			}
 		});
 		button_3.setBounds(500, 148, 100, 70);
@@ -244,7 +245,7 @@ public class MainUI {
 				stock.setBerry(stock.getBerry()-1);
 				stock.setMilk(stock.getMilk()-1);
 				stock.setSirup(stock.getSirup()-1);
-				showlabel("µþ±â½º¹«µð",5000);
+				showlabel("ï¿½ï¿½ï¿½â½ºï¿½ï¿½ï¿½ï¿½",5000);
 			}
 		});
 		button_4.setBounds(650, 148, 100, 70);
@@ -262,7 +263,7 @@ public class MainUI {
 				stock.setMilk(stock.getMilk()-1);
 				stock.setMango(stock.getMango()-1);
 				stock.setSirup(stock.getSirup()-1);
-				showlabel("¸Á°í½º¹«µð",5000);
+				showlabel("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",5000);
 			}
 		});
 		button_5.setBounds(50, 266, 100, 70);
@@ -280,7 +281,7 @@ public class MainUI {
 				stock.setChoco(stock.getChoco()-1);
 				stock.setMilk(stock.getMilk()-1);
 				stock.setSirup(stock.getSirup()-1);
-				showlabel("ÇÖÃÊÄÚ",3000);
+				showlabel("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",3000);
 			}
 		});
 		button_6.setBounds(200, 266, 100, 70);
@@ -294,7 +295,7 @@ public class MainUI {
 					stock.setBlack(stock.getBlack()+1);
 				}
 				stock.setBlack(stock.getBlack()-1);
-				showlabel("ºí·¢Æ¼",4000);
+				showlabel("ï¿½ï¿½Æ¼",4000);
 			}
 		});
 		button_7.setBounds(350, 266, 100, 70);
@@ -312,7 +313,7 @@ public class MainUI {
 				stock.setMilk(stock.getMilk()-1);
 				stock.setBlack(stock.getBlack()-1);
 				stock.setSirup(stock.getSirup()-1);
-				showlabel("¹öºíÆ¼",4000);
+				showlabel("ï¿½ï¿½ï¿½ï¿½Æ¼",4000);
 			}
 		});
 		button_8.setBounds(500, 266, 100, 70);
@@ -326,13 +327,13 @@ public class MainUI {
 					stock.setGreen(stock.getGreen()+1);
 				}
 				stock.setGreen(stock.getGreen()-1);
-				showlabel("±×¸°Æ¼",4000);
+				showlabel("ï¿½×¸ï¿½Æ¼",4000);
 			}
 		});
 				
 		button_9.setBounds(650, 266, 100, 70);
 		panel.add(button_9);		
-		//¹öÆ°
+		//ï¿½ï¿½Æ°
 		
 		
 		JPanel panel_1 = new JPanel();
@@ -438,8 +439,8 @@ public class MainUI {
 			
 			public void actionPerformed(ActionEvent e) {
 				
-				clickshot(coffee.getShot(), "¼¦Ãß°¡", flag_shot);
-				coffee.setShot("¼¦Ãß°¡");
+				clickshot(coffee.getShot(), "ï¿½ï¿½ï¿½ß°ï¿½", flag_shot);
+				coffee.setShot("ï¿½ï¿½ï¿½ß°ï¿½");
 				showlabel(coffee.getName(),coffee.getPrice());
 				flag_shot= true;
 				
@@ -451,7 +452,7 @@ public class MainUI {
 				}
 				
 				coffee.setPrice(coffee.getPrice()+500);
-				coffee.setShot("¼¦Ãß°¡");
+				coffee.setShot("ï¿½ï¿½ï¿½ß°ï¿½");
 				stock.setWondu(stock.getWondu()-1);*/
 				
 			}
@@ -464,17 +465,17 @@ public class MainUI {
 		rdbtnNo.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				if(coffee.getShot()==("¼¦Ãß°¡")){
+				if(coffee.getShot()==("ï¿½ï¿½ï¿½ß°ï¿½")){
 					coffee.setPrice(coffee.getPrice()-500);
 				}
 				
-				coffee.setShot("NO¼¦");
+				coffee.setShot("NOï¿½ï¿½");
 				showlabel(coffee.getName(),coffee.getPrice());
 			}
 		});
 		rdbtnNo.setBounds(209, 83, 121, 26);
 		panel_1.add(rdbtnNo);
-		//¶óµð¿À¹öÆ°
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ°
 		
 		
 		
@@ -484,16 +485,16 @@ public class MainUI {
 		panel_2.setLayout(null);
 		
 		lblNewLabel_1 = new JLabel();
-		lblNewLabel_1.setFont(new Font("±¼¸²", Font.BOLD, 20));
+		lblNewLabel_1.setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.BOLD, 20));
 		lblNewLabel_1.setText("\uCEE4\uD53C");
 		
 		lblNewLabel_1.setBounds(81, 40, 618, 26);
 		panel_2.add(lblNewLabel_1);
-		//½ºÆ®¸µ¿¡ ¹®ÀÚ¿­À» ³Ö°í ¾×¼ÇÀÌ ³ª¿Ã‹š¸¶´Ù ½ºÆ®¸µ¿¡ °ªÀ» ³Ö¾îÁÖ°í ¸¶Áö¸·À¸·Î °ªÀ» ³Ö¾îÁØ´Ù.
+		//ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½×¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã‹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½Ø´ï¿½.
 		lblNewLabel_1.setText(menu);
 				
 		
-		JButton btnNewButton_5 = new JButton("\uACB0\uC81C");//°áÁ¦ ´©¸£¸é ¼­¹ö·Î ÀÔ·Â
+		JButton btnNewButton_5 = new JButton("\uACB0\uC81C");//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				count=0;
@@ -501,17 +502,17 @@ public class MainUI {
 				if(checkOrder() == 0){
 					checkOrder();
 										
-					dao.coffeeadd(coffee);//ÆÇ¸ÅÁ¤º¸ µ¥ÀÌÅÍ¿¡ ÀúÀå
+					dao.coffeeadd(coffee);//ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ ï¿½ï¿½ï¿½ï¿½
 					System.out.println(coffee);
-					//Àç°íÁÙ¾îµé°Ô
-					dao.stockorder(stock);//Àç°í ¼­¹ö¿¡ ÀúÀå
+					//ï¿½ï¿½ï¿½ï¿½Ù¾ï¿½ï¿½ï¿½
+					dao.stockorder(stock);//ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 					System.out.println(stock);
 					buttonGroup.clearSelection();
 					buttonGroup_1.clearSelection();
 					buttonGroup_2.clearSelection();
 					lblNewLabel_1.setText("");
-					JOptionPane.showMessageDialog(null, "°áÁ¦ µÇ¾ú½À´Ï´Ù");
-					//Àç°í°¡ ÀÚµ¿°ü¸® ¸Þ¼Òµå
+					JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½");
+					//ï¿½ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½
 					coffee.setName(null);
 					coffee.setShot(null);
 					coffee.setSize(null);
@@ -529,7 +530,7 @@ public class MainUI {
 					coffee.setSize(null);
 					coffee.setTemp(null);
 					coffee.setPrice(0);
-					JOptionPane.showMessageDialog(null, "Àç·á°¡ ¶³¾îÁ³½À´Ï´Ù.Àç·á¸¦ ÁÖ¹®ÇÏ¼¼¿ä.");
+					JOptionPane.showMessageDialog(null, "ï¿½ï¿½á°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.ï¿½ï¿½á¸¦ ï¿½Ö¹ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
 					flag_size=false;
 					flag_shot=false;
 				}
@@ -551,19 +552,19 @@ public class MainUI {
 				coffee.setTemp(null);
 				coffee.setPrice(0);
 				lblNewLabel_1.setText("");
-				// ¹öÆ° ÃÊ±âÈ­
+				// ï¿½ï¿½Æ° ï¿½Ê±ï¿½È­
 				buttonGroup.clearSelection();
 				buttonGroup_1.clearSelection();
 				buttonGroup_2.clearSelection(); 
 				System.out.println(coffee);
-				JOptionPane.showMessageDialog(null, "¼±ÅÃÃë¼ÒµÇ¾ú½À´Ï´Ù.");
+				JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 				
 			}
 		});
 		button_10.setBounds(431, 121, 123, 38);
 		panel_2.add(button_10);
 		
-		JButton button_11 = new JButton("\uD310\uB9E4\uBCF4\uAE30");//ÆÇ¸ÅÈ®ÀÎ
+		JButton button_11 = new JButton("\uD310\uB9E4\uBCF4\uAE30");//ï¿½Ç¸ï¿½È®ï¿½ï¿½
 		button_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -588,7 +589,7 @@ public class MainUI {
 	
 	
 	
-	public void showlabel(String name, int price){//ÆÇ¸Å µ¥ÀÌÅÍ ÀÔ·Â
+	public void showlabel(String name, int price){//ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
 		
 		coffee.setName(name);
 		coffee.setPrice(price);
@@ -615,7 +616,7 @@ public class MainUI {
 	}//showlabel
 
 	
-	//ÁÖ¹®ÇÒ¶§ Àç°í È®ÀÎ ÇÏ´Â ¸Þ¼Òµå
+	//ï¿½Ö¹ï¿½ï¿½Ò¶ï¿½ ï¿½ï¿½ï¿½ È®ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
 	public int checkOrder(){
 		int result=0;
 		if(	stock.getWondu() == -1 || 
@@ -633,10 +634,10 @@ public class MainUI {
 	}//checkOrder
 	
 	
-	public void clicksize(String befor_size,String size,boolean flag_size){// »çÀÌÁî°ü·ÃµÈ Å¬¸¯Á¤º¸°ü¸® ¸Þ¼Òµå
+	public void clicksize(String befor_size,String size,boolean flag_size){// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½
 		
 		if(flag_size){
-			//µÎ¹øÂ° ÀÌ»ó
+			//ï¿½Î¹ï¿½Â° ï¿½Ì»ï¿½
 			switch (size) {
 			
 			case "SMALL":
@@ -691,7 +692,7 @@ public class MainUI {
 			}
 			
 		}else{
-			//Ã³À½´©¸¦‹š
+			//Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			switch (size) {
 			
 			case "SMALL":
@@ -715,16 +716,16 @@ public class MainUI {
 	
 	
 	
-	public void clickshot(String befor_shot,String shot,boolean flag_shot){//¼¦°ü·ÃµÈ ¹öÆ°°ü¸®
+	public void clickshot(String befor_shot,String shot,boolean flag_shot){//ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½
 		if(flag_shot){
-			//µÎ¹øÀÌ»ó
+			//ï¿½Î¹ï¿½ï¿½Ì»ï¿½
 			switch (shot) {
-			case "¼¦Ãß°¡":
+			case "ï¿½ï¿½ï¿½ß°ï¿½":
 				switch (befor_shot) {
-				case "¼¦Ãß°¡":
+				case "ï¿½ï¿½ï¿½ß°ï¿½":
 					
 					break;
-				case "NO¼¦":
+				case "NOï¿½ï¿½":
 					coffee.setPrice(coffee.getPrice()+500);
 					break;		
 				default:
@@ -732,12 +733,12 @@ public class MainUI {
 				}
 				break;
 				
-			case "NO¼¦":
+			case "NOï¿½ï¿½":
 				switch (befor_shot) {
-				case "¼¦Ãß°¡":
+				case "ï¿½ï¿½ï¿½ß°ï¿½":
 					coffee.setPrice(coffee.getPrice()-500);
 					break;
-				case "NO¼¦":
+				case "NOï¿½ï¿½":
 					break;		
 				default:
 					break;
@@ -747,12 +748,12 @@ public class MainUI {
 				break;
 			}
 		}else {
-			//ÇÑ¹ø´©¸¦¶§
+			//ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			switch (shot) {
-			case "¼¦Ãß°¡":
+			case "ï¿½ï¿½ï¿½ß°ï¿½":
 				coffee.setPrice(coffee.getPrice()+500);
 				break;
-			case "NO¼¦":
+			case "NOï¿½ï¿½":
 				break;		
 			default:
 				break;

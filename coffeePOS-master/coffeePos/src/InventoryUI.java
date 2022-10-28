@@ -30,14 +30,14 @@ public class InventoryUI extends JFrame {
 	coffeedao dao = new coffeedao();
 	Stock stock = new Stock();
 	private JTable table;
-	Object columnNames[] = {"¿øµÎ","¿ìÀ¯","½Ã·´","µş±â","¸Á°í","³ìÂ÷","È«Â÷","ÃÊÄÚ"};
+	Object columnNames[] = {"ì›ë‘","ìš°ìœ ","ì‹œëŸ½","ë”¸ê¸°","ë§ê³ ","ë…¹ì°¨","í™ì°¨","ì´ˆì½”"};
 	int num;
 	String stockname;
 	private JTextField textField;
 	JLabel lblNewLabel;
 	public InventoryUI(){
-		num=0;//ÃÊ±âÈ­
-		stock = dao.getstock();// ¼­¹ö¿¡¼­ µ¥ÀÌÅÍ ¹Ş±â
+		num=0;//ì´ˆê¸°í™”
+		stock = dao.getstock();// ì„œë²„ì—ì„œ ë°ì´í„° ë°›ê¸°
 		
 		setSize(550, 700);
 		setVisible(true);
@@ -59,7 +59,7 @@ public class InventoryUI extends JFrame {
 		panel.add(scrollPane);
 		
 		JLabel lblNewLabel_1 = new JLabel("\uC7AC\uACE0\uD604\uD669");
-		lblNewLabel_1.setFont(new Font("±¼¸²", Font.BOLD, 12));
+		lblNewLabel_1.setFont(new Font("êµ´ë¦¼", Font.BOLD, 12));
 		lblNewLabel_1.setBounds(39, 26, 100, 20);
 		panel.add(lblNewLabel_1);
 		
@@ -73,8 +73,8 @@ public class InventoryUI extends JFrame {
 			
 			public void actionPerformed(ActionEvent e) {
 				
-				stockname="¿øµÎ";
-				lblNewLabel.setText(stockname+"¸¦ ÁÖ¹®ÇÏ½Ç°Ç°¡¿ä? ¼ö·®À» ÀÔ·ÂÇÏ¼¼¿ä.");
+				stockname="ì›ë‘";
+				lblNewLabel.setText(stockname+"ë¥¼ ì£¼ë¬¸í•˜ì‹¤ê±´ê°€ìš”? ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì„¸ìš”.");
 			}
 		});
 		btnNewButton.setBounds(30, 61, 100, 60);
@@ -87,8 +87,8 @@ public class InventoryUI extends JFrame {
 			
 			public void actionPerformed(ActionEvent e) {
 				
-				stockname="¿ìÀ¯";
-				lblNewLabel.setText(stockname+"¸¦ ÁÖ¹®ÇÏ½Ç°Ç°¡¿ä? ¼ö·®À» ÀÔ·ÂÇÏ¼¼¿ä.");
+				stockname="ìš°ìœ ";
+				lblNewLabel.setText(stockname+"ë¥¼ ì£¼ë¬¸í•˜ì‹¤ê±´ê°€ìš”? ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì„¸ìš”.");
 			}
 		});
 		
@@ -98,16 +98,16 @@ public class InventoryUI extends JFrame {
 		btnNewButton_2.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				stockname="½Ã·´";
-				lblNewLabel.setText(stockname+"À» ÁÖ¹®ÇÏ½Ç°Ç°¡¿ä? ¼ö·®À» ÀÔ·ÂÇÏ¼¼¿ä.");
+				stockname="ì‹œëŸ½";
+				lblNewLabel.setText(stockname+"ì„ ì£¼ë¬¸í•˜ì‹¤ê±´ê°€ìš”? ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì„¸ìš”.");
 			}
 		});
 		
 		JButton btnNewButton_3 = new JButton("\uB538\uAE30");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				stockname="µş±â";
-				lblNewLabel.setText(stockname+"¸¦ ÁÖ¹®ÇÏ½Ç°Ç°¡¿ä? ¼ö·®À» ÀÔ·ÂÇÏ¼¼¿ä.");
+				stockname="ë”¸ê¸°";
+				lblNewLabel.setText(stockname+"ë¥¼ ì£¼ë¬¸í•˜ì‹¤ê±´ê°€ìš”? ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì„¸ìš”.");
 			}
 		});
 		btnNewButton_3.setBounds(399, 60, 100, 60);
@@ -116,8 +116,8 @@ public class InventoryUI extends JFrame {
 		JButton btnNewButton_4 = new JButton("\uB9DD\uACE0");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				stockname="¸Á°í";
-				lblNewLabel.setText(stockname+"¸¦ ÁÖ¹®ÇÏ½Ç°Ç°¡¿ä? ¼ö·®À» ÀÔ·ÂÇÏ¼¼¿ä.");
+				stockname="ë§ê³ ";
+				lblNewLabel.setText(stockname+"ë¥¼ ì£¼ë¬¸í•˜ì‹¤ê±´ê°€ìš”? ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì„¸ìš”.");
 			}
 		});
 		btnNewButton_4.setBounds(30, 149, 100, 60);
@@ -126,8 +126,8 @@ public class InventoryUI extends JFrame {
 		JButton btnNewButton_5 = new JButton("\uB179\uCC28");
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				stockname="³ìÂ÷";
-				lblNewLabel.setText(stockname+"¸¦ ÁÖ¹®ÇÏ½Ç°Ç°¡¿ä? ¼ö·®À» ÀÔ·ÂÇÏ¼¼¿ä.");
+				stockname="ë…¹ì°¨";
+				lblNewLabel.setText(stockname+"ë¥¼ ì£¼ë¬¸í•˜ì‹¤ê±´ê°€ìš”? ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì„¸ìš”.");
 			}
 		});
 		btnNewButton_5.setBounds(153, 149, 100, 60);
@@ -136,8 +136,8 @@ public class InventoryUI extends JFrame {
 		JButton btnNewButton_6 = new JButton("\uD64D\uCC28");
 		btnNewButton_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				stockname="È«Â÷";
-				lblNewLabel.setText(stockname+"¸¦ ÁÖ¹®ÇÏ½Ç°Ç°¡¿ä? ¼ö·®À» ÀÔ·ÂÇÏ¼¼¿ä.");
+				stockname="í™ì°¨";
+				lblNewLabel.setText(stockname+"ë¥¼ ì£¼ë¬¸í•˜ì‹¤ê±´ê°€ìš”? ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì„¸ìš”.");
 			
 			}
 		});
@@ -147,20 +147,20 @@ public class InventoryUI extends JFrame {
 		JButton btnNewButton_7 = new JButton("\uCD08\uCF54");
 		btnNewButton_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				stockname="ÃÊÄÚ";
-				lblNewLabel.setText(stockname+"¸¦ ÁÖ¹®ÇÏ½Ç°Ç°¡¿ä? ¼ö·®À» ÀÔ·ÂÇÏ¼¼¿ä.");
+				stockname="ì´ˆì½”";
+				lblNewLabel.setText(stockname+"ë¥¼ ì£¼ë¬¸í•˜ì‹¤ê±´ê°€ìš”? ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì„¸ìš”.");
 			}
 		});
 		btnNewButton_7.setBounds(399, 149, 100, 60);
 		panel_1.add(btnNewButton_7);
 		
 		JLabel lblNewLabel_2 = new JLabel("\uBB3C\uD488\uC8FC\uBB38");
-		lblNewLabel_2.setFont(new Font("±¼¸²", Font.BOLD, 12));
+		lblNewLabel_2.setFont(new Font("êµ´ë¦¼", Font.BOLD, 12));
 		lblNewLabel_2.setBounds(30, 30, 100, 20);
 		panel_1.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("\uC8FC\uBB38\uC218\uB7C9\uC785\uB825 :");
-		lblNewLabel_3.setFont(new Font("±¼¸²", Font.BOLD, 12));
+		lblNewLabel_3.setFont(new Font("êµ´ë¦¼", Font.BOLD, 12));
 		lblNewLabel_3.setBounds(30, 237, 100, 20);
 		panel_1.add(lblNewLabel_3);
 		
@@ -170,7 +170,7 @@ public class InventoryUI extends JFrame {
 		textField.setColumns(10);
 		
 		lblNewLabel = new JLabel("");
-		lblNewLabel.setFont(new Font("±¼¸²", Font.BOLD, 17));
+		lblNewLabel.setFont(new Font("êµ´ë¦¼", Font.BOLD, 17));
 		lblNewLabel.setBounds(30, 275, 450, 30);
 		panel_1.add(lblNewLabel);
 		
@@ -189,35 +189,35 @@ public class InventoryUI extends JFrame {
 		btnNewButton_8.setBounds(26, 23, 100, 50);
 		panel_3.add(btnNewButton_8);
 		
-		JButton btnNewButton_9 = new JButton("\uC8FC\uBB38");//ÁÖ¹®
+		JButton btnNewButton_9 = new JButton("\uC8FC\uBB38");//ì£¼ë¬¸
 		btnNewButton_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 								
-				if(stockname.equals("¿øµÎ")){// ÁÖ¹®ÇÏ±â
+				if(stockname.equals("ì›ë‘")){// ì£¼ë¬¸í•˜ê¸°
 					stock.setWondu(stock.getWondu()+(Integer.parseInt(textField.getText())));
-				}else if (stockname.equals("¿ìÀ¯")){
+				}else if (stockname.equals("ìš°ìœ ")){
 					stock.setMilk(stock.getMilk()+(Integer.parseInt(textField.getText())));					
-				}else if (stockname.equals("½Ã·´")){
+				}else if (stockname.equals("ì‹œëŸ½")){
 					stock.setSirup(stock.getSirup()+(Integer.parseInt(textField.getText())));
-				}else if (stockname.equals("µş±â")){
+				}else if (stockname.equals("ë”¸ê¸°")){
 					stock.setBerry(stock.getBerry()+(Integer.parseInt(textField.getText())));
-				}else if (stockname.equals("¸Á°í")){
+				}else if (stockname.equals("ë§ê³ ")){
 					stock.setMango(stock.getMango()+(Integer.parseInt(textField.getText())));
-				}else if (stockname.equals("³ìÂ÷")){
+				}else if (stockname.equals("ë…¹ì°¨")){
 					stock.setGreen(stock.getGreen()+(Integer.parseInt(textField.getText())));
-				}else if (stockname.equals("È«Â÷")){
+				}else if (stockname.equals("í™ì°¨")){
 					stock.setBlack(stock.getBlack()+(Integer.parseInt(textField.getText())));
-				}else if (stockname.equals("ÃÊÄÚ")){
+				}else if (stockname.equals("ì´ˆì½”")){
 					stock.setChoco(stock.getChoco()+(Integer.parseInt(textField.getText())));
 				}
 				System.out.println(stock);
 				dao.stockorder(stock);
 				stockname="";
-				//Integer.parseInt(textField.getText());//ÀÔ·Â°ª ¼ıÀÚ·Îº¯È¯
+				//Integer.parseInt(textField.getText());//ì…ë ¥ê°’ ìˆ«ìë¡œë³€í™˜
 				textField.setText("");
 				lblNewLabel.setText("");
-				JOptionPane.showMessageDialog(null, "ÁÖ¹®ÀÌ ¼º°øÇÏ¿´½À´Ï´Ù.");
+				JOptionPane.showMessageDialog(null, "ì£¼ë¬¸ì´ ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
 			}
 		});
 		btnNewButton_9.setBounds(156, 23, 100, 50);
